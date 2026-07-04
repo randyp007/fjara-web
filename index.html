@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* Language detection on the start page only: redirect once per session to the
+   matching language page. Only here (root); the /xx/ pages never redirect,
+   so there are no redirect loops. Without JS, and for search engines, this
+   English root page stays visible. */
+(function () {
+  try {
+    if (sessionStorage.getItem('fjaraLangRedirect')) return;
+    var supported = ['de', 'en', 'fr', 'es', 'it', 'pt', 'nl'];
+    var langs = navigator.languages || [navigator.language || 'en'];
+    var pick = null;
+    for (var i = 0; i < langs.length && !pick; i++) {
+      var code = String(langs[i]).slice(0, 2).toLowerCase();
+      if (supported.indexOf(code) >= 0) pick = code;
+    }
+    sessionStorage.setItem('fjaraLangRedirect', '1');
+    if (pick) location.replace(pick + '/index.html');
+  } catch (e) { /* stay on the English root */ }
+})();
+</script>
+<title>Fjara — A quiet companion for your sobriety</title>
+<meta name="description" content="Fjara is a discreet, dignified sobriety companion for iPhone. Everything stays on your device: no account, no server, no tracking. Free to download, optional Plus membership.">
+<link rel="canonical" href="https://fjara.app/index.html">
+<link rel="alternate" hreflang="de" href="https://fjara.app/de/index.html">
+<link rel="alternate" hreflang="en" href="https://fjara.app/en/index.html">
+<link rel="alternate" hreflang="fr" href="https://fjara.app/fr/index.html">
+<link rel="alternate" hreflang="es" href="https://fjara.app/es/index.html">
+<link rel="alternate" hreflang="it" href="https://fjara.app/it/index.html">
+<link rel="alternate" hreflang="pt" href="https://fjara.app/pt/index.html">
+<link rel="alternate" hreflang="nl" href="https://fjara.app/nl/index.html">
+<link rel="alternate" hreflang="x-default" href="https://fjara.app/index.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='6' fill='%230B0F14'/%3E%3Cpath d='M16 4a9 9 0 1 0 6.8 14.8A10.3 10.3 0 0 1 16 4Z' fill='%2357AAB7'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to main content</a>
+<nav class="langbar" aria-label="Language">
+  <a href="de/index.html">DE</a><a href="en/index.html" class="on">EN</a><a href="fr/index.html">FR</a><a href="es/index.html">ES</a><a href="it/index.html">IT</a><a href="pt/index.html">PT</a><a href="nl/index.html">NL</a>
+</nav>
+
+<main id="main">
+  <div class="hero">
+    <canvas id="tide" class="tide-canvas" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-grid" style="grid-template-columns:1fr;">
+        <div>
+          <span class="brand" style="margin-bottom:26px;">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M16 2a10 10 0 1 0 7.6 16.5A11.5 11.5 0 0 1 16 2Z" fill="#57AAB7"/><path d="M2.5 23c2.6-2.1 5.2-2.1 7.8 0s5.2 2.1 7.8 0 5.1-2.1 7.4 0" stroke="#3E8B98" stroke-width="1.7" stroke-linecap="round"/></svg>
+            Fjara
+          </span>
+          <p class="eyebrow">Quiet · Local · Yours</p>
+          <h1 class="display">A quiet companion for your sobriety.</h1>
+          <p class="lede">Fjara accompanies you through the hours when staying sober is hard — calmly, with dignity, and entirely on your device. No account, no server, no tracking. For iPhone; an Apple Watch app is in the works.</p>
+          <p class="lede">Choose your language:</p>
+          <nav class="langlist" aria-label="Choose language">
+            <a href="de/index.html" lang="de">Deutsch</a>
+            <a href="en/index.html" lang="en">English</a>
+            <a href="fr/index.html" lang="fr">Français</a>
+            <a href="es/index.html" lang="es">Español</a>
+            <a href="it/index.html" lang="it">Italiano</a>
+            <a href="pt/index.html" lang="pt">Português</a>
+            <a href="nl/index.html" lang="nl">Nederlands</a>
+          </nav>
+          <div class="store-row">
+            <!-- TODO: APPSTOREID nach Release ersetzen -->
+            <a class="store-badge" href="https://apps.apple.com/app/idAPPSTOREID">
+              <svg width="22" height="26" viewBox="0 0 22 26" aria-hidden="true"><path d="M18.3 13.8c0-3 2.5-4.5 2.6-4.6-1.4-2.1-3.6-2.4-4.4-2.4-1.9-.2-3.7 1.1-4.6 1.1-1 0-2.4-1.1-4-1.1-2 0-3.9 1.2-5 3-2.1 3.7-.5 9.2 1.5 12.2 1 1.5 2.2 3.1 3.8 3 1.5-.1 2.1-1 4-1s2.4 1 4 1c1.7 0 2.7-1.5 3.7-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.3-1.3-3.3-4.7ZM15.2 4.6c.8-1 1.4-2.4 1.2-3.8-1.2 0-2.7.8-3.5 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.8-.7 3.6-1.7Z" fill="#E7EDEF"/></svg>
+              <span class="sb-text"><span class="sb-small">Download on the</span><span class="sb-big">App Store</span></span>
+            </a>
+            <span class="store-note">Free to download · optional Plus membership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-bottom">
+      <span>&copy; 2026 Andreas Putzinger. All rights reserved.</span>
+      <nav aria-label="Legal">
+        <a href="en/eula.html">EULA</a>
+        <a href="en/privacy.html">Privacy</a>
+        <a href="imprint.html">Imprint</a>
+        <a href="#top">Back to top</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="assets/wave.js" defer></script>
+</body>
+</html>

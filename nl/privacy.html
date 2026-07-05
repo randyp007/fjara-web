@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <!-- Vorerst NICHT indizieren: weder Suchmaschinen noch LLM-/KI-Crawler. -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="robots" content="noai, noimageai">
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fjara — Privacybeleid</title>
@@ -32,7 +37,7 @@
 
 <main id="main" class="doc">
   <h1>Privacybeleid</h1>
-  <p class="meta-line">Laatst bijgewerkt: 3 juli 2026 · versie 1.0 · geldt voor de app &ldquo;Fjara&rdquo; en de website fjara.app</p>
+  <p class="meta-line">Laatst bijgewerkt: 4 juli 2026 · versie 1.1 · geldt voor de app &ldquo;Fjara&rdquo; en de website fjara.app</p>
   <div class="transnote"><strong>Let op:</strong> dit is een vertaling van het Duitse origineel, aangeboden voor je gemak. Bij twijfel of tegenstrijdigheid is de <strong>Duitse versie juridisch bindend</strong>.</div>
 
   <h2>1. Verwerkingsverantwoordelijke</h2>
@@ -47,13 +52,13 @@
 
   <h2>2. Uitgangspunt: alles blijft op je apparaat</h2>
   <div class="callout">
-    <p><strong>Alle</strong> inhoud en gebruiksgegevens van de app — je startdatum of nuchtere tijd, check-ins, notities, urge-surfing-sessies, mijlpalen en instellingen — worden <strong>uitsluitend en lokaal op je apparaat</strong> opgeslagen. Deze gegevens <strong>verlaten het apparaat nooit</strong>.</p>
+    <p><strong>Alle</strong> inhoud en gebruiksgegevens van de app — je startdatum of nuchtere tijd, check-ins, notities, urge-surfing-sessies, mijlpalen en instellingen — worden <strong>standaard lokaal op je apparaat</strong> opgeslagen. Standaard <strong>verlaten deze gegevens het apparaat niet</strong>; alleen wanneer je de optionele iCloud-synchronisatie uitdrukkelijk inschakelt, worden ze met je eigen privé-iCloud gesynchroniseerd (hoofdstuk 3e).</p>
     <p>Juist omdat informatie over middelengebruik bijzonder gevoelig is (gezondheidsgegevens in de zin van art. 9 AVG), is Fjara zo gebouwd dat de aanbieder deze gegevens <strong>nooit ontvangt, ziet of kan verwerken</strong>.</p>
   </div>
   <ul>
     <li>Geen servers van de aanbieder; de app legt uit zichzelf geen netwerkverbindingen.</li>
     <li>Geen account, geen registratie, geen e-mailadres vereist.</li>
-    <li>Geen cloudsynchronisatie (per deze versie).</li>
+    <li>Geen cloudsynchronisatie als standaard; een optionele iCloud-synchronisatie met je eigen privé-iCloud is mogelijk, maar staat standaard uit en gebeurt alleen op uitdrukkelijk verzoek (hoofdstuk 3e).</li>
     <li>Geen analytics, geen tracking, geen profilering, geen advertenties, geen SDK&rsquo;s van derden, geen geautomatiseerde besluitvorming — er verschijnt daarom ook geen App Tracking Transparency-dialoog.</li>
     <li>De aanbieder verzamelt, bewaart, ontvangt en verzendt <strong>geen enkel</strong> persoonsgegeven — geen namen, geen IP-adressen, geen apparaat-ID&rsquo;s, geen gebruiksgegevens.</li>
   </ul>
@@ -68,19 +73,21 @@
   <p>Optionele herinneringen worden puur lokaal via het besturingssysteem ingepland (UserNotifications). Er is geen pushserver.</p>
   <h3>d) Diagnostiek van het besturingssysteem</h3>
   <p>Alleen als je in de iOS-systeeminstellingen het delen van diagnostische gegevens met Apple hebt ingeschakeld, kan Apple crashrapporten verwerken. Dit is een functie van Apple; de aanbieder ontvangt hier niets van.</p>
+  <h3>e) Optionele iCloud-synchronisatie (op uitdrukkelijk verzoek)</h3>
+  <p><strong>Standaard staat de iCloud-synchronisatie uit</strong> — Fjara werkt puur lokaal. Alleen wanneer je die in de instellingen uitdrukkelijk inschakelt, worden je Fjara-gegevens met je <strong>eigen privé-iCloud</strong> gesynchroniseerd, zodat ze op je eigen Apple-apparaten overeenkomen en bij het wisselen van apparaat behouden blijven. De gegevens staan daarbij in de <strong>privé-CloudKit-database van je eigen Apple-account</strong> — <strong>niet op een server van de aanbieder</strong>. De aanbieder heeft geen servers, ontvangt geen toegangsgegevens en heeft <strong>geen enkele inzage</strong> in deze gegevens; voor de opslag in iCloud is Apple verantwoordelijk in het kader van je Apple-account (het <a href="https://www.apple.com/legal/privacy/" rel="noopener">privacybeleid van Apple</a> is van toepassing). Je kunt de synchronisatie <strong>op elk moment weer uitschakelen</strong>. Voor de best mogelijke bescherming raden we aan om in de iCloud-instellingen van Apple <strong>&ldquo;Geavanceerde gegevensbescherming&rdquo; (Advanced Data Protection)</strong> in te schakelen; daardoor worden je iCloud-gegevens <strong>eind-tot-eind versleuteld</strong>, zodat zelfs Apple ze niet kan lezen.</p>
 
   <h2>4. Website (fjara.app)</h2>
   <p>Deze website is statisch en gebruikt <strong>geen cookies</strong>, geen analysetools en geen ingesloten inhoud van derden (geen externe lettertypen, geen CDN&rsquo;s).</p>
   <p>De website wordt geleverd via <strong>GitHub Pages</strong> (GitHub, Inc.). Bij een bezoek verwerkt GitHub als hostingprovider technisch noodzakelijke serverlogs (bijv. IP-adres, tijdstip van toegang, opgevraagde pagina) om de site te leveren en aanvallen af te weren. De rechtsgrondslag is art. 6 lid 1 sub f AVG (gerechtvaardigd belang bij een veilige werking). Details: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub General Privacy Statement</a>. De aanbieder zelf heeft geen toegang tot persoonsgebonden loggegevens.</p>
 
   <h2>5. Rechtsgrondslagen</h2>
-  <p>Voor zover er überhaupt sprake is van verwerking in de zin van het gegevensbeschermingsrecht (lokaal op je apparaat of in de serverlogs van de host), berust die op art. 6 lid 1 sub b AVG (levering van de functies van de app) en art. 6 lid 1 sub f AVG (gerechtvaardigd belang bij een gegevensarme app en een veilige website). De aanbieder verzendt geen gegevens aan zichzelf, aan derden of naar derde landen.</p>
+  <p>Voor zover er überhaupt sprake is van verwerking in de zin van het gegevensbeschermingsrecht (lokaal op je apparaat of in de serverlogs van de host), berust die op art. 6 lid 1 sub b AVG (levering van de functies van de app) en art. 6 lid 1 sub f AVG (gerechtvaardigd belang bij een gegevensarme app en een veilige website). Schakel je de optionele iCloud-synchronisatie in (hoofdstuk 3e), dan gebeurt dat aanvullend op grondslag van je toestemming (art. 6 lid 1 sub a AVG), die je op elk moment kunt intrekken door de synchronisatie uit te schakelen, met werking voor de toekomst. De aanbieder verzendt geen gegevens aan zichzelf, aan derden of naar derde landen.</p>
 
   <h2>6. Doorgifte aan derden</h2>
-  <p><strong>Geen.</strong> Er worden geen gegevens verkocht, verhuurd of gedeeld. De enige contacten met derden zijn Apple voor de afhandeling van aankopen (onder eigen verantwoordelijkheid, hoofdstuk 3b) en GitHub als host van de website (hoofdstuk 4).</p>
+  <p><strong>Geen.</strong> Er worden geen gegevens verkocht, verhuurd of gedeeld. De enige contacten met derden zijn Apple voor de afhandeling van aankopen (onder eigen verantwoordelijkheid, hoofdstuk 3b), Apple als beheerder van je eigen iCloud wanneer je de optionele iCloud-synchronisatie inschakelt (hoofdstuk 3e), en GitHub als host van de website (hoofdstuk 4).</p>
 
   <h2>7. Bewaartermijn &amp; verwijdering</h2>
-  <p>Je gegevens blijven op je apparaat totdat je ze in de app verwijdert of de app de-installeert. <strong>Het verwijderen van de app wist alle lokaal opgeslagen Fjara-gegevens.</strong> Verwijdering door de aanbieder is noch mogelijk noch nodig, omdat hij geen gegevens bezit.</p>
+  <p>Je gegevens blijven op je apparaat totdat je ze in de app verwijdert of de app de-installeert. <strong>Het verwijderen van de app wist alle lokaal opgeslagen Fjara-gegevens.</strong> Heb je de optionele iCloud-synchronisatie ingeschakeld, dan blijft daarnaast een kopie in je eigen privé-iCloud bewaard, ook na een de-installatie; die kun je op elk moment verwijderen door de Fjara-gegevens bij ingeschakelde synchronisatie in de app te wissen of ze te verwijderen in de iCloud-instellingen van je Apple-account. Is de synchronisatie uit (puur lokaal), dan zijn met de de-installatie alle gegevens onherroepelijk weg. Verwijdering door de aanbieder is noch mogelijk noch nodig, omdat hij geen gegevens bezit.</p>
 
   <h2>8. Jouw rechten (AVG)</h2>
   <p>Je hebt de rechten uit art. 15–18, 20 en 21 AVG (inzage, rectificatie, wissing, beperking, overdraagbaarheid, bezwaar). Omdat de aanbieder geen persoonsgegevens over jou bezit, oefen je die controle direct zelf uit: bekijk je gegevens in de app, corrigeer ze door te bewerken, wis ze door de app te de-installeren. Voor gegevens die met aankopen samenhangen, kun je bij Apple terecht.</p>
@@ -90,13 +97,13 @@
   <p>Fjara richt zich op volwassenen die hun relatie met middelen willen veranderen. Los daarvan vindt er hoe dan ook geen gegevensverzameling door de aanbieder plaats. Voor aankopen gelden de regels van Apple voor ouderlijk toezicht en Delen met gezin.</p>
 
   <h2>10. Wijzigingen van dit beleid</h2>
-  <p>Dit beleid wordt aangepast wanneer de app of de juridische situatie verandert. Mocht er ooit een functie worden geïntroduceerd waardoor gegevens het apparaat zouden kunnen verlaten (bijv. een optionele iCloud-synchronisatie), dan wordt dit beleid <strong>vooraf</strong> bijgewerkt en wordt die functie duidelijk gemarkeerd. De actuele versie vind je in de app onder <em>Instellingen → Juridisch &amp; privacy</em> en op deze website.</p>
+  <p>Dit beleid wordt aangepast wanneer de app of de juridische situatie verandert. De in hoofdstuk 3e beschreven optionele iCloud-synchronisatie is al verwerkt en blijft standaard uitgeschakeld. Mocht er in de toekomst nog een functie worden geïntroduceerd waardoor gegevens het apparaat zouden kunnen verlaten, dan wordt dit beleid <strong>vooraf</strong> bijgewerkt en wordt die functie duidelijk gemarkeerd. De actuele versie vind je in de app onder <em>Instellingen → Juridisch &amp; privacy</em> en op deze website.</p>
 
   <h2>11. Contact</h2>
   <p>Vragen over privacy: <a href="mailto:privacy@fjara.app">privacy@fjara.app</a> · gegevens van de aanbieder: <a href="../imprint.html">Colofon / Impressum</a>.</p>
 </main>
 
-<p class="trustline">Geen account · geen tracking · geen persoonsgegevens verlaten je apparaat.</p>
+<p class="trustline">Geen account · geen tracking · standaard verlaten geen gegevens je apparaat.</p>
 <footer class="doc-footer">
   <span>&copy; 2026 Fjara &middot; Andreas Putzinger, Oostenrijk</span>
   <nav aria-label="Legal">

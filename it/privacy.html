@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <!-- Vorerst NICHT indizieren: weder Suchmaschinen noch LLM-/KI-Crawler. -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="robots" content="noai, noimageai">
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fjara — Informativa sulla privacy</title>
@@ -32,7 +37,7 @@
 
 <main id="main" class="doc">
   <h1>Informativa sulla privacy</h1>
-  <p class="meta-line">Aggiornata al: 3 luglio 2026 · Versione 1.0 · vale per l'app &laquo;Fjara&raquo; e per il sito web fjara.app</p>
+  <p class="meta-line">Aggiornata al: 4 luglio 2026 · Versione 1.1 · vale per l'app &laquo;Fjara&raquo; e per il sito web fjara.app</p>
   <div class="transnote"><strong>Nota:</strong> questa è una traduzione dell'originale tedesco, messa a disposizione per tua comodità. In caso di dubbio o di divergenza <strong>fa fede la versione tedesca</strong>, che è quella giuridicamente vincolante.</div>
 
   <h2>1. Titolare del trattamento</h2>
@@ -47,13 +52,13 @@
 
   <h2>2. Principio: tutto resta sul tuo dispositivo</h2>
   <div class="callout">
-    <p><strong>Tutti</strong> i contenuti e i dati d'uso dell'app — la tua data di inizio o il tempo di sobrietà, i check-in, le note, le sessioni di urge surfing, i traguardi e le impostazioni — sono salvati <strong>esclusivamente e localmente sul tuo dispositivo</strong>. Questi dati <strong>non lasciano mai il dispositivo</strong>.</p>
+    <p><strong>Tutti</strong> i contenuti e i dati d'uso dell'app — la tua data di inizio o il tempo di sobrietà, i check-in, le note, le sessioni di urge surfing, i traguardi e le impostazioni — sono salvati <strong>per impostazione predefinita localmente sul tuo dispositivo</strong>. Per impostazione predefinita questi dati <strong>non lasciano il dispositivo</strong>; solo se attivi espressamente la sincronizzazione iCloud facoltativa vengono sincronizzati con la tua iCloud privata (sezione 3e).</p>
     <p>Proprio perché le informazioni sul consumo di sostanze sono particolarmente delicate (dati relativi alla salute ai sensi dell'art. 9 GDPR), Fjara è costruita in modo che il fornitore <strong>non le riceva mai, non le veda e non possa trattarle</strong>.</p>
   </div>
   <ul>
     <li>Nessun server del fornitore; l'app non avvia connessioni di rete di propria iniziativa.</li>
     <li>Nessun account, nessuna registrazione, nessun indirizzo e-mail richiesto.</li>
-    <li>Nessuna sincronizzazione cloud (in questa versione).</li>
+    <li>Nessuna sincronizzazione cloud come impostazione predefinita; è possibile una sincronizzazione iCloud facoltativa nella tua iCloud privata, ma è disattivata per impostazione predefinita e avviene solo su tua espressa richiesta (sezione 3e).</li>
     <li>Nessuna analisi, nessun tracciamento, nessuna profilazione, nessuna pubblicità, nessun SDK di terze parti, nessun processo decisionale automatizzato — per questo non compare alcuna finestra di App Tracking Transparency.</li>
     <li>Il fornitore non raccoglie, non conserva, non riceve e non trasmette <strong>alcun</strong> dato personale — né nomi né indirizzi IP, identificatori del dispositivo o dati d'uso.</li>
   </ul>
@@ -68,19 +73,21 @@
   <p>I promemoria facoltativi sono programmati in modo puramente locale tramite il sistema operativo (UserNotifications). Non esiste alcun server push.</p>
   <h3>d) Diagnostica del sistema operativo</h3>
   <p>Solo se nelle impostazioni di sistema di iOS hai attivato la condivisione dei dati diagnostici con Apple, Apple può trattare i rapporti sugli arresti anomali. Si tratta di una funzione di Apple; il fornitore non ne riceve nulla.</p>
+  <h3>e) Sincronizzazione iCloud facoltativa (su tua espressa richiesta)</h3>
+  <p><strong>Per impostazione predefinita la sincronizzazione iCloud è disattivata</strong> — Fjara funziona in modo puramente locale. Solo se la attivi espressamente nelle impostazioni, i tuoi dati di Fjara vengono sincronizzati con la tua <strong>iCloud privata</strong>, affinché corrispondano sui tuoi dispositivi Apple e si conservino in caso di cambio di dispositivo. In tal caso i dati risiedono nel <strong>database CloudKit privato del tuo account Apple</strong> — <strong>non su un server del fornitore</strong>. Il fornitore non gestisce alcun server, non riceve credenziali di accesso e non ha <strong>alcuna visibilità</strong> su questi dati; per l'archiviazione su iCloud è responsabile Apple nell'ambito del tuo account Apple (si applica l'<a href="https://www.apple.com/legal/privacy/" rel="noopener">informativa sulla privacy di Apple</a>). Puoi <strong>disattivare la sincronizzazione in qualsiasi momento</strong>. Per la massima protezione ti consigliamo di attivare, nelle impostazioni iCloud di Apple, la <strong>&laquo;Protezione avanzata dei dati&raquo; (Advanced Data Protection)</strong>; in questo modo i tuoi dati iCloud vengono <strong>cifrati end-to-end</strong>, così che nemmeno Apple possa leggerli.</p>
 
   <h2>4. Sito web (fjara.app)</h2>
   <p>Questo sito è statico e non utilizza <strong>alcun cookie</strong>, nessuno strumento di analisi e nessun contenuto incorporato di terze parti (niente font esterni, niente CDN).</p>
   <p>Il sito è distribuito tramite <strong>GitHub Pages</strong> (GitHub, Inc.). Quando lo visiti, GitHub, in qualità di provider di hosting, tratta i log del server tecnicamente necessari (per esempio indirizzo IP, orario dell'accesso, pagina richiesta) per fornire il sito e respingere gli attacchi. La base giuridica è l'art. 6, par. 1, lett. f GDPR (interesse legittimo a un funzionamento sicuro). Dettagli: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub General Privacy Statement</a>. Il fornitore stesso non ha accesso ai dati personali dei log.</p>
 
   <h2>5. Basi giuridiche</h2>
-  <p>Nella misura in cui abbia luogo un qualsiasi trattamento rilevante ai fini della protezione dei dati (localmente sul tuo dispositivo o nei log del server dell'host), esso si fonda sull'art. 6, par. 1, lett. b GDPR (fornitura delle funzioni dell'app) e sull'art. 6, par. 1, lett. f GDPR (interesse legittimo a un'app che riduce al minimo i dati e a un sito web sicuro). Il fornitore non trasmette alcun dato a sé stesso, a terzi o verso paesi terzi.</p>
+  <p>Nella misura in cui abbia luogo un qualsiasi trattamento rilevante ai fini della protezione dei dati (localmente sul tuo dispositivo o nei log del server dell'host), esso si fonda sull'art. 6, par. 1, lett. b GDPR (fornitura delle funzioni dell'app) e sull'art. 6, par. 1, lett. f GDPR (interesse legittimo a un'app che riduce al minimo i dati e a un sito web sicuro). Se attivi la sincronizzazione iCloud facoltativa (sezione 3e), ciò avviene inoltre sulla base del tuo consenso (art. 6, par. 1, lett. a GDPR), che puoi revocare in qualsiasi momento, con effetto per il futuro, disattivando la sincronizzazione. Il fornitore non trasmette alcun dato a sé stesso, a terzi o verso paesi terzi.</p>
 
   <h2>6. Comunicazione a terzi</h2>
-  <p><strong>Nessuna.</strong> Nessun dato viene venduto, ceduto in locazione o condiviso. Gli unici contatti con terzi sono Apple per la gestione degli acquisti (che agisce sotto la propria responsabilità, sezione 3b) e GitHub come host del sito (sezione 4).</p>
+  <p><strong>Nessuna.</strong> Nessun dato viene venduto, ceduto in locazione o condiviso. Gli unici contatti con terzi sono Apple per la gestione degli acquisti (che agisce sotto la propria responsabilità, sezione 3b), Apple come gestore della tua iCloud personale qualora tu attivi la sincronizzazione iCloud facoltativa (sezione 3e) e GitHub come host del sito (sezione 4).</p>
 
   <h2>7. Durata di conservazione ed eliminazione</h2>
-  <p>I tuoi dati restano sul tuo dispositivo finché non li elimini nell'app o non disinstalli l'app. <strong>Eliminando l'app vengono rimossi tutti i dati di Fjara salvati localmente.</strong> Un'eliminazione da parte del fornitore non è né possibile né necessaria, poiché egli non detiene alcun dato.</p>
+  <p>I tuoi dati restano sul tuo dispositivo finché non li elimini nell'app o non disinstalli l'app. <strong>Eliminando l'app vengono rimossi tutti i dati di Fjara salvati localmente.</strong> Se hai attivato la sincronizzazione iCloud facoltativa, resta inoltre una copia nella tua iCloud privata, anche dopo la disinstallazione; puoi rimuoverla in qualsiasi momento eliminando i dati di Fjara dall'app mentre la sincronizzazione è attiva, oppure rimuovendoli nelle impostazioni iCloud del tuo account Apple. Se la sincronizzazione era disattivata (funzionamento puramente locale), con la disinstallazione tutti i dati scompaiono in modo irreversibile. Un'eliminazione da parte del fornitore non è né possibile né necessaria, poiché egli non detiene alcun dato.</p>
 
   <h2>8. I tuoi diritti (GDPR)</h2>
   <p>Ti spettano i diritti di cui agli artt. 15–18, 20 e 21 GDPR (accesso, rettifica, cancellazione, limitazione, portabilità dei dati, opposizione). Poiché il fornitore non detiene dati personali che ti riguardano, il controllo lo eserciti direttamente tu: consulti i tuoi dati nell'app, li rettifichi modificandoli, li cancelli disinstallando l'app. Per i dati collegati agli acquisti rivolgiti ad Apple.</p>
@@ -90,13 +97,13 @@
   <p>Fjara si rivolge ad adulti che vogliono cambiare il proprio rapporto con le sostanze. A prescindere da ciò, non avviene comunque alcuna raccolta di dati da parte del fornitore. Gli acquisti sono soggetti alle regole di Apple sul controllo parentale e su &laquo;In famiglia&raquo; (Family Sharing).</p>
 
   <h2>10. Modifiche a questa informativa</h2>
-  <p>Questa informativa sarà adeguata se l'app o il quadro giuridico dovessero cambiare. Se in futuro venisse introdotta una funzione attraverso la quale dei dati potrebbero lasciare il dispositivo (per esempio una sincronizzazione iCloud facoltativa), questa informativa sarà aggiornata <strong>in anticipo</strong> e la funzione chiaramente contrassegnata. La versione attuale è disponibile nell'app in <em>Impostazioni → Note legali e privacy</em> e su questo sito.</p>
+  <p>Questa informativa sarà adeguata se l'app o il quadro giuridico dovessero cambiare. La sincronizzazione iCloud facoltativa descritta nella sezione 3e è già contemplata e resta disattivata per impostazione predefinita. Qualora in futuro venisse introdotta un'ulteriore funzione attraverso la quale dei dati potrebbero lasciare il dispositivo, questa informativa sarà aggiornata <strong>in anticipo</strong> e la funzione chiaramente contrassegnata. La versione attuale è disponibile nell'app in <em>Impostazioni → Note legali e privacy</em> e su questo sito.</p>
 
   <h2>11. Contatti</h2>
   <p>Domande sulla privacy: <a href="mailto:privacy@fjara.app">privacy@fjara.app</a> · Dati del fornitore: <a href="../imprint.html">Impressum / Note legali</a>.</p>
 </main>
 
-<p class="trustline">Nessun account · nessun tracciamento · nessun dato personale lascia il tuo dispositivo.</p>
+<p class="trustline">Nessun account · nessun tracciamento · per impostazione predefinita nessun dato lascia il tuo dispositivo.</p>
 <footer class="doc-footer">
   <span>&copy; 2026 Fjara &middot; Andreas Putzinger, Austria</span>
   <nav aria-label="Legal">

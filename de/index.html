@@ -20,7 +20,36 @@
 <link rel="alternate" hreflang="nl" href="https://fjara.app/nl/index.html">
 <link rel="alternate" hreflang="x-default" href="https://fjara.app/index.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='6' fill='%230B0F14'/%3E%3Cpath d='M3 15c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0c1.5-1.5 3-1.8 5-1' stroke='%2357AAB7' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M3 20c2.5-2 5-2 7.5 0s5 2 7.5 0c1.5-1.2 3-1.4 5-.8' stroke='%233E8B98' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E'http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='6' fill='%230B0F14'/%3E%3Cpath d='M16 4a9 9 0 1 0 6.8 14.8A10.3 10.3 0 0 1 16 4Z' fill='%2357AAB7'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* Sichtbares App-Icon im Hero (nutzt bestehende Farbtoken) */
+  .app-badge {
+    display: block; width: 72px; height: 72px;
+    border-radius: 22%;
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 40px 2px var(--glow);
+    margin-bottom: 22px;
+  }
+  /* Screenshot-Galerie „Ein Blick in Fjara" */
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .shot { margin: 0; }
+  .shot img {
+    display: block; width: 100%; height: auto;
+    border-radius: 28px;
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5), 0 0 60px 4px var(--glow);
+    background: var(--dusk);
+  }
+  .shot figcaption {
+    margin-top: 16px; text-align: center;
+    font-family: var(--serif); font-size: 15.5px; color: var(--ink-soft);
+  }
+  @media (max-width: 900px) {
+    .shots { grid-template-columns: 1fr; gap: 40px; max-width: 320px; margin: 0 auto; }
+  }
+</style>
 </head>
 <body id="top">
 <a class="skip" href="#main">Zum Inhalt springen</a>
@@ -54,10 +83,11 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
+          <img class="app-badge" src="../assets/icon.png" width="72" height="72" alt="Fjara App-Icon">
           <p class="eyebrow">Still · Lokal · Deins</p>
-          <h1 class="display">Für den Moment, in dem das Verlangen kommt.</h1>
+          <h1 class="display">Wenn das Verlangen kommt, bist du nicht allein damit.</h1>
           <p class="brand-note" style="font-family: var(--serif); font-size: 17px; line-height: 1.55; color: var(--ink-soft); max-width: 52ch; margin: -2px 0 28px;">„Fjara" ist isländisch für die Ebbe — den Moment, in dem sich die Welle zurückzieht. Genau darum geht es: Du reitest die Welle des Verlangens, bis sie von selbst abebbt.</p>
-          <p class="lede">Fjara ist für den Moment gemacht, in dem das Verlangen kommt — nach einem Glas, einer Zigarette oder einer anderen Gewohnheit, die du loslassen möchtest. Du öffnest sie, tippst auf einen Knopf und reitest die Welle: eine Atemübung, die du als sanfte Vibration in der Hand spürst und die dein Atmen ruhig durch den Moment führt, bis das Verlangen nachlässt.</p>
+          <p class="lede">Fjara ist für den einen Moment gemacht, in dem der Wunsch aufsteigt — nach einem Glas, einer Zigarette oder einer anderen Gewohnheit, die du loslassen willst. Du öffnest sie, tippst einmal und reitest die Welle: eine Atemübung, die du als sanfte Vibration in der Hand spürst und die dich ruhig durch den Moment atmet, bis das Verlangen abebbt. Der Kern ist für immer gratis — kein Konto, kein Server, nichts, das dich beobachtet.</p>
           <p class="claim">„Verlangen kommt in Wellen. Es steigt an, erreicht seinen höchsten Punkt — und ebbt wieder ab. Fjara bleibt bei dir, die ganze Welle hindurch."</p>
           <div class="store-row">
             <!-- TODO: APPSTOREID nach Release ersetzen -->
@@ -65,7 +95,7 @@
               <svg width="22" height="26" viewBox="0 0 22 26" aria-hidden="true"><path d="M18.3 13.8c0-3 2.5-4.5 2.6-4.6-1.4-2.1-3.6-2.4-4.4-2.4-1.9-.2-3.7 1.1-4.6 1.1-1 0-2.4-1.1-4-1.1-2 0-3.9 1.2-5 3-2.1 3.7-.5 9.2 1.5 12.2 1 1.5 2.2 3.1 3.8 3 1.5-.1 2.1-1 4-1s2.4 1 4 1c1.7 0 2.7-1.5 3.7-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.3-1.3-3.3-4.7ZM15.2 4.6c.8-1 1.4-2.4 1.2-3.8-1.2 0-2.7.8-3.5 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.8-.7 3.6-1.7Z" fill="#E7EDEF"/></svg>
               <span class="sb-text"><span class="sb-small">Laden im</span><span class="sb-big">App Store</span></span>
             </a>
-            <span class="store-note">Kostenlos laden · optionale Plus-Mitgliedschaft</span>
+            <span class="store-note">Kostenlos laden. Die Welle bleibt für immer gratis — kein Konto nötig.</span>
           </div>
         </div>
         <div class="phone-wrap">
@@ -115,34 +145,41 @@
     </div>
   </section>
 
-  <!-- ============================ 3 WERTSÄULEN ============================ -->
+  <!-- ============================ 4 WERTE ============================ -->
   <section id="werte" class="block">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Wofür Fjara steht</p>
-        <h2 class="section-title">Drei Dinge, auf die du dich verlassen kannst.</h2>
+        <h2 class="section-title">Vier Dinge, auf die du dich verlassen kannst.</h2>
       </div>
       <div class="pillars">
+        <div class="card">
+          <div class="glyph" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M2 13c2.5-4 5-6 9-6s6.5 2 9 6" stroke="#57AAB7" stroke-width="1.6" stroke-linecap="round"/><path d="M2 17c2.5-2.5 5-3.8 9-3.8s6.5 1.3 9 3.8" stroke="#3E8B98" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Für den Moment gebaut</h3>
+          <p>Ein Rückfall passiert meist in einer einzigen, kurzen Minute — und genau dann ist selten etwas Passendes zur Hand. Fjara ist für diese Minute da: ein Tipp auf „Welle reiten", und eine sanfte Vibration schwillt unter deiner Hand an und klingt wieder ab. Dein Atem folgt ihr von selbst. Kein Nachdenken, kein Richtig oder Falsch — nur ein Knopf, der dich hindurchträgt.</p>
+        </div>
         <div class="card">
           <div class="glyph" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4" y="9" width="14" height="10" rx="2.5" stroke="#57AAB7" stroke-width="1.6"/><path d="M7 9V6.5a4 4 0 0 1 8 0V9" stroke="#57AAB7" stroke-width="1.6"/></svg>
           </div>
           <h3>Privat by Design</h3>
-          <p>Deine Daten verlassen dein iPhone nicht. Kein Konto, keine Cloud, keine Analyse-SDKs, keine Werbe-IDs. Was du Fjara anvertraust, gehört dir allein — Privatsphäre ist hier kein Feature, sondern die Grundlage von allem.</p>
+          <p>Deine Daten verlassen dein iPhone nicht. Kein Konto, keine Cloud, keine Analyse-SDKs, keine Werbe-IDs. Was du Fjara anvertraust, gehört dir allein — Privatsphäre ist hier kein Feature, sondern die Grundlage von allem. Löschst du die App, ist alles weg. Vollständig.</p>
         </div>
         <div class="card">
           <div class="glyph" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M2 13c2.5-4 5-6 9-6s6.5 2 9 6" stroke="#57AAB7" stroke-width="1.6" stroke-linecap="round"/><path d="M2 17c2.5-2.5 5-3.8 9-3.8s6.5 1.3 9 3.8" stroke="#3E8B98" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="6" y="6" width="10" height="10" rx="3" stroke="#57AAB7" stroke-width="1.6"/><path d="M8 6l.6-3h4.8l.6 3M8 16l.6 3h4.8l.6-3" stroke="#57AAB7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Die Welle, die man fühlt</h3>
-          <p>Wenn das Verlangen steigt, tippst du auf „Welle reiten". Eine sanfte Vibration schwillt unter deiner Hand an, erreicht ihren Scheitel und klingt wieder ab — deine Atmung folgt ihr von selbst in einen ruhigen Takt. Kein Nachdenken, kein Richtig oder Falsch, nur ein Knopf, der dich durch den Moment trägt. Weitere Techniken — Box-Atmung, Anker-Puls und 5-4-3-2-1 — kommen mit Fjara Plus dazu.</p>
+          <h3>Diskret am Handgelenk</h3>
+          <p>Auch in Gesellschaft, mit einem Glas in Reichweite, kannst du die Welle reiten — still an der Apple Watch. Vibration, Restzeit und Atemphase spürst du am Handgelenk, ohne das Telefon zu zücken. Niemand am Tisch muss etwas merken. Die Apple-Watch-App gehört zu Fjara Plus.</p>
         </div>
         <div class="card">
           <div class="glyph" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7.5" stroke="#57AAB7" stroke-width="1.6"/><path d="M11 6.5V11l3 2" stroke="#57AAB7" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
-          <h3>Ein würdevolles Ritual</h3>
-          <p>Neben der Welle findest du einen kurzen täglichen Check-in, ein privates Tagebuch mit deinem eigenen Plan für schwere Momente und sichtbare Meilensteine auf deinem Weg. Kein Konfetti, keine Ranglisten, kein Streak-Druck — und wenn ein Tag anders verläuft, beginnt der nächste ohne Vorwurf.</p>
+          <h3>Würde statt Scham</h3>
+          <p>Kein Konfetti, keine Ranglisten, kein Streak-Druck. Fjara zeigt deinen Weg ruhig: Tage, Notizen, Meilensteine — und dein eigener Plan für schwere Momente, den du im Voraus vorbereitest. Verläuft ein Tag anders, beginnt der nächste ohne Vorwurf und bewahrt die Strecke, die du schon gegangen bist.</p>
         </div>
       </div>
     </div>
@@ -205,19 +242,51 @@
   <section id="plus" class="block alt">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Optional, kein Muss</p>
-        <h2 class="section-title">Fjara Plus.</h2>
-        <p class="section-sub">Wer mehr möchte, erweitert Fjara mit der optionalen Plus-Mitgliedschaft:</p>
+        <p class="eyebrow">Freiwillig, kein Muss</p>
+        <h2 class="section-title">Fjara Plus — der Kern bleibt gratis.</h2>
+        <p class="section-sub">Die Welle ist und bleibt kostenlos, so oft du sie brauchst. Plus schaltet mehr Tiefe frei — für alle, die auf ihrem Weg mehr möchten. Du wählst, was zu dir passt. Kein Countdown, kein Fake-Rabatt.</p>
       </div>
       <ul class="quiet-list">
-        <li>Mehrere Vorsätze</li>
-        <li>Lange Übungen</li>
-        <li>Box-Atmung, Anker-Puls &amp; 5-4-3-2-1</li>
-        <li>Unbegrenztes Journal</li>
-        <li>Klangwelt, on-device generiert</li>
-        <li>Apple-Watch-App</li>
+        <li>Mehrere Vorsätze zugleich begleiten</li>
+        <li>Längere Übungen für den Moment</li>
+        <li>Weitere Techniken: Box-Atmung, Anker-Puls &amp; 5-4-3-2-1</li>
+        <li>Unbegrenztes privates Journal</li>
+        <li>Klangwelt, direkt auf dem Gerät erzeugt</li>
+        <li>Apple-Watch-App für den diskreten Moment</li>
       </ul>
-      <p style="margin-top:26px;">Box-Atmung, Anker-Puls und 5-4-3-2-1 gehören ebenso wie die Apple-Watch-App zu Fjara Plus. Nur die Welle bleibt dauerhaft kostenlos.</p>
+      <p style="margin-top:26px;"><strong>Ehrlich und übersichtlich:</strong></p>
+      <ul class="quiet-list">
+        <li><strong>Woche — 2,99 €:</strong> zum Ausprobieren, jederzeit kündbar.</li>
+        <li><strong>Monat — 4,99 €:</strong> flexibel von Monat zu Monat.</li>
+        <li><strong>Jahr — 19,99 €:</strong> der beste Wert, rund 38 Cent pro Woche. Sieben Tage kostenlos testen.</li>
+        <li><strong>Lifetime — 29,99 €:</strong> ein einmaliger Kauf, kein Abo. Einmal zahlen, für immer behalten.</li>
+      </ul>
+      <p style="margin-top:26px;">Nur die Welle brauchst du nie zu bezahlen — sie bleibt für immer gratis. Abos verlängern sich automatisch, bis du sie kündigst; das kannst du jederzeit in den App-Store-Einstellungen tun. Preise können je nach Region abweichen; es gilt der im App Store angezeigte Betrag.</p>
+    </div>
+  </section>
+
+  <!-- =========================== EIN BLICK IN FJARA =========================== -->
+  <section id="blick" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Screenshots</p>
+        <h2 class="section-title">Ein Blick in Fjara.</h2>
+        <p class="section-sub">Drei Momente aus der App — so ruhig, wie sie sich anfühlen soll.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <img src="../assets/shots/de_home.png" width="1206" height="2622" loading="lazy" alt="Fjara Startbildschirm mit den Tagen deines Weges">
+          <figcaption>Dein Weg</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/shots/de_welle.png" width="1206" height="2622" loading="lazy" alt="Die Welle reiten — die geführte Atemübung">
+          <figcaption>Die Welle reiten</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/shots/de_journal.png" width="1206" height="2622" loading="lazy" alt="Journal und Mein Plan für schwere Momente">
+          <figcaption>Journal &amp; Mein Plan</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 

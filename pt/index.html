@@ -20,7 +20,40 @@
 <link rel="alternate" hreflang="nl" href="https://fjara.app/nl/index.html">
 <link rel="alternate" hreflang="x-default" href="https://fjara.app/index.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='6' fill='%230B0F14'/%3E%3Cpath d='M3 15c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0c1.5-1.5 3-1.8 5-1' stroke='%2357AAB7' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M3 20c2.5-2 5-2 7.5 0s5 2 7.5 0c1.5-1.2 3-1.4 5-.8' stroke='%233E8B98' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E'http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='6' fill='%230B0F14'/%3E%3Cpath d='M16 4a9 9 0 1 0 6.8 14.8A10.3 10.3 0 0 1 16 4Z' fill='%2357AAB7'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* App-Icon im Hero + Screenshot-Galerie — nutzt die bestehenden Farbtoken */
+  .app-icon {
+    display: block;
+    width: 72px; height: 72px;
+    border-radius: 22%;
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 40px 2px var(--glow);
+    margin-bottom: 22px;
+  }
+  .shots {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; max-width: 900px; margin: 0 auto;
+  }
+  .shot { margin: 0; text-align: center; }
+  .shot img {
+    width: 100%; height: auto; display: block;
+    border-radius: 28px;
+    border: 1px solid var(--line-strong);
+    background: var(--dusk);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 60px 4px var(--glow);
+  }
+  .shot figcaption {
+    margin-top: 16px;
+    font-family: var(--serif); font-style: italic;
+    color: var(--ink-soft); font-size: 14.5px;
+  }
+  @media (max-width: 720px) {
+    .shots { grid-template-columns: 1fr; max-width: 340px; gap: 34px; }
+  }
+</style>
 </head>
 <body id="top">
 <a class="skip" href="#main">Pular para o conteúdo principal</a>
@@ -54,9 +87,10 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
+          <img class="app-icon" src="../assets/icon.png" alt="Fjara App-Icon" width="72" height="72">
           <p class="eyebrow">Para o momento em que a vontade aperta</p>
-          <h1 class="display">Quando bate a vontade, o Fjara atravessa o momento com você.</h1>
-          <p class="lede">A Fjara está lá para aquele momento — quando surge a vontade de beber, de fumar ou de ceder a outro hábito que você quer largar. Você abre o app, toca em um botão e faz uma respiração guiada que sente na palma da mão. Ele acompanha o seu ritmo até a vontade passar. Tudo fica no seu iPhone: sem conta, sem servidor, ninguém mais vê.</p>
+          <h1 class="display">Quando a vontade chega, você não está sozinho com ela.</h1>
+          <p class="lede">O Fjara foi feito para aquele momento em que a vontade aparece — de um gole, de um cigarro ou de outro hábito que você quer largar. Você abre o app, toca uma vez e surfa a onda: uma respiração guiada que sente como uma vibração suave na mão e que conduz o seu fôlego com calma pelo momento, até a vontade recuar. O essencial é gratuito para sempre — sem conta, sem servidor, nada observando você.</p>
           <p class="name-origin" style="color:var(--ink-soft); font-size:15.5px; max-width:52ch; margin:-16px 0 28px;">&ldquo;Fjara&rdquo; é a palavra islandesa para a maré vazante — o instante em que a onda recua. É esse o espírito do app: você surfa a onda da vontade e permanece com ela até que, por si mesma, se acalme e recue.</p>
           <p class="claim">&ldquo;A vontade vem em ondas. O Fjara permanece com você enquanto ela cresce — e enquanto recua.&rdquo;</p>
           <div class="store-row">
@@ -65,7 +99,7 @@
               <svg width="22" height="26" viewBox="0 0 22 26" aria-hidden="true"><path d="M18.3 13.8c0-3 2.5-4.5 2.6-4.6-1.4-2.1-3.6-2.4-4.4-2.4-1.9-.2-3.7 1.1-4.6 1.1-1 0-2.4-1.1-4-1.1-2 0-3.9 1.2-5 3-2.1 3.7-.5 9.2 1.5 12.2 1 1.5 2.2 3.1 3.8 3 1.5-.1 2.1-1 4-1s2.4 1 4 1c1.7 0 2.7-1.5 3.7-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.3-1.3-3.3-4.7ZM15.2 4.6c.8-1 1.4-2.4 1.2-3.8-1.2 0-2.7.8-3.5 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.8-.7 3.6-1.7Z" fill="#E7EDEF"/></svg>
               <span class="sb-text"><span class="sb-small">Disponível na</span><span class="sb-big">App Store</span></span>
             </a>
-            <span class="store-note">Gratuito para baixar · plano Plus opcional</span>
+            <span class="store-note">Baixe de graça. A onda continua gratuita para sempre — sem precisar de conta.</span>
           </div>
         </div>
         <div class="phone-wrap">
@@ -125,30 +159,37 @@
   <section id="values" class="block">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">O que mais o Fjara oferece</p>
-        <h2 class="section-title">Além da onda, do seu jeito.</h2>
+        <p class="eyebrow">O que o Fjara representa</p>
+        <h2 class="section-title">Quatro coisas com que você pode contar.</h2>
       </div>
       <div class="pillars">
         <div class="card">
           <div class="glyph" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7.5" stroke="#57AAB7" stroke-width="1.6"/><path d="M11 6.5V11l3 2" stroke="#57AAB7" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M2 12c2.5-4 5-6 9-6s6.5 2 9 6" stroke="#57AAB7" stroke-width="1.6" stroke-linecap="round"/><path d="M2 16c2.5-2.5 5-3.8 9-3.8s6.5 1.3 9 3.8" stroke="#3E8B98" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
-          <h3>Um check-in diário</h3>
-          <p>Uma pergunta curta, uma vez por dia: como você está hoje. Leva alguns segundos e ajuda a perceber os seus próprios padrões — sem metas, sem pontos, sem pressão de sequência.</p>
+          <h3>Feito para o momento</h3>
+          <p>Uma recaída costuma acontecer em um único minuto — e é justo aí que nada de útil está à mão. O Fjara existe para esse minuto: um toque em &ldquo;Surfar a onda&rdquo; e uma vibração suave cresce e recua sob a sua mão. A respiração acompanha sozinha. Nada de pensar, nada de certo ou errado — só um botão que atravessa o momento com você.</p>
         </div>
         <div class="card">
           <div class="glyph" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4.5" y="3.5" width="13" height="15" rx="2.5" stroke="#57AAB7" stroke-width="1.6"/><path d="M7.5 8h7M7.5 11h7M7.5 14h4" stroke="#3E8B98" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4" y="9" width="14" height="10" rx="2.5" stroke="#57AAB7" stroke-width="1.6"/><path d="M7 9V6.5a4 4 0 0 1 8 0V9" stroke="#57AAB7" stroke-width="1.6"/></svg>
           </div>
-          <h3>Seu diário e o seu plano</h3>
-          <p>Um diário privado onde você anota o que quiser — e o seu próprio &ldquo;plano para os momentos difíceis&rdquo;: o que fazer, para quem ligar, o que lembrar. Escrito por você, guardado só para você.</p>
+          <h3>Privado por princípio</h3>
+          <p>Os seus dados nunca saem do seu iPhone. Sem conta, sem nuvem, sem SDKs de análise, sem identificadores de publicidade. O que você confia ao Fjara pertence só a você — aqui a privacidade não é um recurso, é a base de tudo. Apague o app e tudo desaparece. Por completo.</p>
+        </div>
+        <div class="card">
+          <div class="glyph" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="6.5" y="6.5" width="9" height="9" rx="2.5" stroke="#57AAB7" stroke-width="1.6"/><path d="M9 6.5l.4-3h3.2l.4 3M9 15.5l.4 3h3.2l.4-3" stroke="#3E8B98" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Discreto no seu pulso</h3>
+          <p>Mesmo acompanhado, com um copo ao alcance, você pode surfar a onda — em silêncio, no Apple Watch. A vibração, o tempo restante e a fase da respiração você sente no pulso, sem tirar o telefone do bolso. Ninguém à mesa precisa perceber. O app para Apple Watch faz parte do Fjara Plus.</p>
         </div>
         <div class="card">
           <div class="glyph" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2.5l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L3.2 8.2l5.4-.8L11 2.5Z" stroke="#57AAB7" stroke-width="1.6" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Marcos visíveis — e o Plus</h3>
-          <p>Os seus dias e marcos ficam à vista, sob uma luz serena. E com o Fjara Plus você ganha exercícios mais longos, outras técnicas para o momento, uma paisagem sonora e um app para o Apple Watch.</p>
+          <h3>Dignidade, não vergonha</h3>
+          <p>Sem confete, sem ranking, sem pressão de sequência. O Fjara mostra o seu caminho com serenidade: dias, anotações, marcos — e o seu próprio plano para os momentos difíceis, preparado com antecedência. Se um dia sai diferente, o próximo começa sem cobrança e guarda o caminho que você já percorreu.</p>
         </div>
       </div>
     </div>
@@ -204,6 +245,57 @@
         <li>Apague o app, e todos os dados do Fjara desaparecem. Por completo.</li>
       </ul>
       <p style="margin-top:26px;"><a href="privacy.html">Leia a Política de Privacidade completa &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- ================================ FJARA PLUS ================================ -->
+  <section id="plus" class="block alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Opcional, nunca obrigatório</p>
+        <h2 class="section-title">Fjara Plus — o essencial continua gratuito.</h2>
+        <p class="section-sub">A onda é e continua gratuita, quantas vezes você precisar. O Plus abre mais profundidade — para quem quer ir além no seu caminho. Você escolhe o que combina com você. Sem contagem regressiva, sem desconto falso.</p>
+      </div>
+      <ul class="quiet-list">
+        <li>Acompanhe vários propósitos ao mesmo tempo</li>
+        <li>Exercícios mais longos para o momento</li>
+        <li>Outras técnicas: respiração quadrada, pulso-âncora e 5-4-3-2-1</li>
+        <li>Diário privado ilimitado</li>
+        <li>Uma paisagem sonora, gerada no próprio aparelho</li>
+        <li>App para Apple Watch, para o momento discreto</li>
+      </ul>
+      <p style="margin-top:26px;"><strong>Transparente e claro:</strong></p>
+      <ul class="quiet-list">
+        <li><strong>Semanal:</strong> para experimentar, cancele quando quiser.</li>
+        <li><strong>Mensal:</strong> flexível, de mês a mês.</li>
+        <li><strong>Anual:</strong> o melhor valor por semana, com sete dias grátis para testar.</li>
+        <li><strong>Vitalício:</strong> uma compra única, não é assinatura. Pague uma vez e é seu para sempre.</li>
+      </ul>
+      <p style="margin-top:26px;">A onda é a única coisa que você nunca paga — ela continua gratuita para sempre. As assinaturas se renovam automaticamente até você cancelar, o que pode ser feito quando quiser nos ajustes da App Store. O valor exato aparece na App Store, na sua moeda; os preços podem variar conforme a região.</p>
+    </div>
+  </section>
+
+  <!-- ============================ SCREENSHOTS ============================ -->
+  <section id="glimpse" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Por dentro do Fjara</p>
+        <h2 class="section-title">Uma olhada no Fjara</h2>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <img src="../assets/shots/en_home.png" alt="Fjara — tela inicial" loading="lazy">
+          <figcaption>O seu caminho</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/shots/en_welle.png" alt="Fjara — surfar a onda" loading="lazy">
+          <figcaption>Surfar a onda</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/shots/en_journal.png" alt="Fjara — diário e Meu plano" loading="lazy">
+          <figcaption>Diário e Meu plano</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
